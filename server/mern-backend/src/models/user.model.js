@@ -33,7 +33,7 @@ UserSchema.virtual("password")
     this.salt = this.makeSalt();
     this.hashed_password = this.encryptPassword(password);
   })
-  .get(() => {
+  .get(function () {
     return this._password;
   });
 
